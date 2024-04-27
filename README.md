@@ -2,7 +2,8 @@
 # Chat Application
 ![image](https://github.com/OleksandrDushnyi/Chat-Application/assets/129120542/531eafb0-91e6-46fa-84a5-b12afa409b61)
 
-Users should communicate in the room named "chat". Server should handle the next events:
+ Users should communicate in the room named "chat". Server should handle the next events:
+ 
 
 "connection" - event listeners to the newly created connection should be added here
 
@@ -21,7 +22,8 @@ Users should communicate in the room named "chat". Server should handle the next
  
 "disconnect"
 
-Server should emit the next events to the client(s):
+ Server should emit the next events to the client(s):
+ 
 
 "name taken" - to current socket connection if chosen name is empty or belongs already to another user (in "join" handler)
 

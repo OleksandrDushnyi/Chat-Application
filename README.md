@@ -13,8 +13,10 @@ Users should communicate in the room named "chat". Server should handle the next
 "personal message" - is called when message from user to the specific another user. Payload - object of the next structure:
 
  {  
+ 
    to: // name of user that has to receive the message  
    message: ...  
+   
  }
  
 "disconnect"
@@ -32,12 +34,17 @@ Server should emit the next events to the client(s):
 "chat message" - to all socket connections in the "chat" room except sender. Should be emitted in "chat message" handler. Should send a payload of the next structure:
 
  {
+ 
    name: // sender name,
    message: ...,
+   
  }
  
 "personal message" to socket connection that corresponds to the name of receiver. Should be emitted in "personal message" handler. Should send a payload of the next structure:
+
  {
+ 
    name: // sender name,
    message: ...,
+   
  }

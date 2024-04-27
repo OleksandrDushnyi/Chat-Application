@@ -11,6 +11,7 @@ Users should communicate in the room named "chat". Server should handle the next
 "chat message" - is called when message from user is sent to the wohole chat. Payload - string message.
 
 "personal message" - is called when message from user to the specific another user. Payload - object of the next structure:
+
  {  
    to: // name of user that has to receive the message  
    message: ...  
@@ -29,6 +30,7 @@ Server should emit the next events to the client(s):
 "user list" - to all socket connections in the "chat" room when user joins to the "chat" room with payload - array of user names (strings).
 
 "chat message" - to all socket connections in the "chat" room except sender. Should be emitted in "chat message" handler. Should send a payload of the next structure:
+
  {
    name: // sender name,
    message: ...,
